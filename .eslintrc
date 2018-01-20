@@ -1,0 +1,31 @@
+extends: airbnb
+
+plugins:
+  - iot-course
+
+env:
+  browser: true
+  jest: true
+
+rules:
+  strict: off
+
+  semi:
+    - warn
+    - never
+  arrow-parens:
+    - error
+    - as-needed
+
+  react/jsx-filename-extension: off
+
+  import/no-unresolved:
+    - 2
+    - ignore:
+      - ^react-native
+
+  import/no-extraneous-dependencies: off
+  import/extensions:
+    react-native: always
+
+  iot-course/arrow-expressions: warn

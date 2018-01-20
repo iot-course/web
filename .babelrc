@@ -1,0 +1,21 @@
+{
+  "plugins": [
+    "react-hot-loader/babel",
+    "transform-decorators-legacy",
+    "transform-class-properties",
+    "transform-object-rest-spread",
+    "transform-async-to-generator"
+  ],
+  "presets": [
+    "airbnb",
+    "react",
+    ["env", {
+      "targets": {
+        "chrome": 50,
+        "explorer": 11,
+        "firefox": 45
+      }
+    }]
+
+  ]
+}
