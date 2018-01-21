@@ -18,12 +18,4 @@ module.exports =  ({dev})=>({
     {test: /\.(gif|jpe?g|png|svg|ttf|eot)$/, loader: 'file-loader'},
   ]},
 
-  resolve: {
-    alias: {
-      'react-native': 'react-native-web',
-      'react-router-native': 'react-router-dom',
-      'react-native-vector-icons/FontAwesome':'react-native-vector-icons/dist/FontAwesome'
-    }
-  }
-
 })
