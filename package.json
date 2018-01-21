@@ -22,7 +22,7 @@
     "webpack-dev-server": "^2.11.0"
   },
   "scripts": {
-    "develop": "webpack-dev-server --hot --env.dev"
+    "dev": "webpack-dev-server --hot --env.dev"
   },
   "dependencies": {
     "react": "^16.2.0",
