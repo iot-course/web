@@ -1,4 +1,8 @@
 const {resolve} = require('path')
+const request = require('sync-request')
+const res = request('get', 'https://raw.githubusercontent.com/iot-course/org/master/.eslintrc.json')
+const options = JSON.parse(res.getBody('utf8'))
+
 
 module.exports =  ({dev})=>({
   entry: ['react-hot-loader/patch', './index.js'],
@@ -14,7 +18,8 @@ module.exports =  ({dev})=>({
   devtool:  dev ? 'eval': 'source-map',
 
   module:{ rules:[
-    {test: /\.js$/, loaders:['babel-loader', 'eslint-loader'], exclude: /node_modules/},
+    {test: /\.js$/, loader:'babel-loader', exclude: /node_modules/},
+    {test: /\.js$/, loader:'eslint-loader', exclude: /node_modules/,  options},
     {test: /\.(gif|jpe?g|png|svg|ttf|eot)$/, loader: 'file-loader'},
   ]},
 
