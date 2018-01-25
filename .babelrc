@@ -1,8 +1,11 @@
 {
   "plugins": [
-    ["module-alias", [
-      { "src": "npm:react-native-web", "expose": "react-native" }
-    ]],
+    [ "module-resolver", {
+      "root": ["./src"],
+      "alias": {
+        "react-native": "react-native-web"
+      }
+    }],
     "react-hot-loader/babel",
     "transform-decorators-legacy",
     "transform-class-properties",
