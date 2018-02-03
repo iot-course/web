@@ -37,7 +37,7 @@ export const Message = () => {
     },
   })
   return <View style={s.container}>
-    <Text>lorem</Text>
+    <Text>Well, hello there!</Text>
   </View>
 }
 

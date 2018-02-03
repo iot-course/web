@@ -2,7 +2,7 @@ Feature: Hello World
 
   Scenario: User is unregistered and loads page
 
-    When the user presses button with text "Say Hi?"
+    # When the user presses button with text "Say Hi?"
     Then the user sees message "Well, hello there!"
 
     # When the user does *NOT*h get result
