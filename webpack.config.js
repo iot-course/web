@@ -1,12 +1,12 @@
 const {resolve} = require('path')
 const request = require('sync-request')
-// const res = request('get', 'https://raw.githubusercontent.com/iot-course/org/master/.eslintrc.json')
-// const options = JSON.parse(res.getBody('utf8'))
-
+const res = request('get', 'https://raw.githubusercontent.com/iot-course/org/master/eslintOptions.json')
+const options = JSON.parse(res.getBody('utf8'))
 
 module.exports =  ({dev})=>({
   entry: ['react-hot-loader/patch', './index.js'],
   devServer:{
+    stats: 'minimal',
     contentBase: resolve('web'),
     hot: true,
   },
@@ -19,7 +19,7 @@ module.exports =  ({dev})=>({
 
   module:{ rules:[
     {test: /\.js$/, loader:'babel-loader', exclude: /node_modules/},
-    // {test: /\.js$/, loader:'eslint-loader', exclude: /node_modules/,  options},
+    {test: /\.js$/, loader:'eslint-loader', exclude: /node_modules/,  options},
     {test: /\.(gif|jpe?g|png|svg|ttf|eot)$/, loader: 'file-loader'},
   ]},
 
